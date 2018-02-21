@@ -1,0 +1,1 @@
+C:\Users\Dell\source\repos\Booking\Booking\Booking.UWP\Booking.UWP.csproj;x86

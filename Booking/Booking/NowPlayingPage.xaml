@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Booking.NowPlayingPage">
+    <ContentPage.Content>
+        <AbsoluteLayout 
+            BackgroundColor="Violet"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout 
+                BackgroundColor="Aquamarine"
+                x:Name="SlMovies" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <ListView 
+                    BackgroundColor="White"
+                    x:Name="MovieListView" HasUnevenRows="True" SeparatorVisibility="None" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame>
+                                    <Grid
+                                        BackgroundColor="Blue">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.4*"/>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <BoxView BackgroundColor="Red" Grid.Column="0"
+                                               HeightRequest="120" WidthRequest="150" />
+                                        <StackLayout Grid.Column="1">
+                                            <Label Text="test"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

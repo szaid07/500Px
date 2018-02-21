@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+              Padding="0,20,0,0"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Booking.UpCommingPage"
+             BackgroundImage="loginPage.png"
+            NavigationPage.HasNavigationBar="False"        
+    >
+    
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        
+    <StackLayout
+        AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"
+        Padding="20,0,20,30"
+        Spacing="20"
+        >
+        
+        <Label
+            Text="Dream View" 
+            HorizontalOptions="CenterAndExpand"
+            FontSize="55"
+            HeightRequest="55"
+            TextColor="Black"
+            BackgroundColor="Transparent"
+            />
+        <Entry
+            x:Name="txtLogin"
+            VerticalOptions="Center"
+            Placeholder="User name"
+            PlaceholderColor="Gray"
+            BackgroundColor="Transparent"
+            HeightRequest="40"
+            TextColor="Black"
+            FontSize="Medium"
+            />
+        <Entry
+            x:Name="txtPassword"
+            VerticalOptions="Center"
+            Placeholder="Password"
+            PlaceholderColor="Gray"
+            BackgroundColor="Transparent"
+            HeightRequest="40"
+            TextColor="Black"
+            FontSize="Medium"
+            IsPassword="True"
+            />
+        <Button 
+            x:Name="btnLogin"
+            HorizontalOptions="CenterAndExpand"
+            Text="Login"
+            TextColor="White"
+            BackgroundColor="BlueViolet"
+            FontSize="Medium"
+            HeightRequest="45"
+            Clicked="btnLogin_Clicked"
+            />
+        
+        <Label
+            Text="OR"
+            HorizontalOptions="Center"
+            FontSize="Small"
+            />
+            <Button 
+            x:Name="btnSignUp"
+            HorizontalOptions="CenterAndExpand"
+            Text="SignUp"
+            TextColor="White"
+            BackgroundColor="BlueViolet"
+            FontSize="Medium"
+            HeightRequest="45"
+            Clicked="btnSignUp_Clicked"
+            />
+        </StackLayout>
+        <ActivityIndicator 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.5,0.8,-1,-1"
+            x:Name="LoginLoader"
+            Color="BlueViolet"
+            IsRunning="True"
+            IsVisible="False"/>
+    </AbsoluteLayout>
+</ContentPage>
